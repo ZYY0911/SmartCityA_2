@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/head" />
+
+    <EditText
+        android:id="@+id/et_title"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@android:drawable/alert_light_frame"
+        android:hint="标题"
+        android:paddingLeft="20dp" />
+
+    <EditText
+        android:id="@+id/et_msg"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@android:drawable/alert_light_frame"
+        android:gravity="top|left"
+        android:hint="内容"
+        android:padding="20dp" />
+
+    <GridView
+        android:id="@+id/gird_photo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:horizontalSpacing="10dp"
+        android:numColumns="3"
+        android:padding="4dp"
+        android:verticalSpacing="10dp" />
+
+    <Button
+        android:id="@+id/bt_submit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/main_bt_style"
+        android:text="提交"
+        android:textColor="#fff"
+        android:textSize="17sp" />
+</LinearLayout>

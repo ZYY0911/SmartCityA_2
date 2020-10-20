@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.smartcitya_2">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
+        android:name=".AppClient"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.GuildActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activity.AppHomeActivity" />
+        <activity android:name=".activity.EmptyActivity" />
+        <activity android:name=".activity.MotifImag" />
+        <activity android:name=".activity.OrderDetailsActivity" />
+        <activity android:name=".activity.LineAllLookActivity" />
+        <activity android:name=".activity.ImageAdapter" />
+        <activity android:name=".activity.DtDetailsActivity" />
+        <activity android:name=".activity.NewDetailsActivity" />
+        <activity android:name=".activity.EmptyServiceActivity" />
+        <activity android:name=".activity.DjdtDetailsActivity" />
+        <activity android:name=".activity.DyxxActivity" />
+        <activity android:name=".activity.DjdtActivity" />
+        <activity android:name=".activity.KcListActivity" />
+        <activity android:name=".activity.PlayKCactivity" />
+        <activity android:name=".activity.HdActivity" />
+        <activity android:name=".activity.JyxcActivity" />
+        <activity android:name=".activity.DhDetailsActivity" />
+        <activity android:name=".activity.WdlyActivity" />
+        <activity android:name=".activity.SspActivity" />
+        <activity android:name=".activity.DetailsActivity" />
+        <activity android:name=".activity.SearchActivity"/>
+
+    </application>
+
+</manifest>
