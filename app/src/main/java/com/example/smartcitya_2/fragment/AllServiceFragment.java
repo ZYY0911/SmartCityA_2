@@ -78,9 +78,9 @@ public class AllServiceFragment extends Fragment {
         btSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SearchDialog searchDialog = new SearchDialog(etSearch.getText().toString());
+                SearchDialog searchDialog = new SearchDialog(etSearch.getText().toString(),appHomeActivity);
                 searchDialog.show(getChildFragmentManager(), "");
-
+                btSubmit.setText("");
             }
         });
 

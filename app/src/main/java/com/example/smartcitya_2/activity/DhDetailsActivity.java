@@ -3,6 +3,7 @@ package com.example.smartcitya_2.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
@@ -51,7 +52,7 @@ public class DhDetailsActivity extends AppCompatActivity {
     private NewList newList;
 
     public static void newInstance(NewList newList, Context context) {
-        Intent intent = new Intent(context, DjdtDetailsActivity.class);
+        Intent intent = new Intent(context, DhDetailsActivity.class);
         intent.putExtra("info", newList);
         context.startActivity(intent);
     }
@@ -60,7 +61,6 @@ public class DhDetailsActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dh_details);
-
         initView();
         newList = (NewList) getIntent().getSerializableExtra("info");
         title.setText(newList.getTitle());
@@ -68,9 +68,16 @@ public class DhDetailsActivity extends AppCompatActivity {
         title1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Util.showToast("保存成功", DhDetailsActivity.this);
+                Util.showToast("报名成功", DhDetailsActivity.this);
             }
         });
+        itemImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+        ivImage.setImageResource(newList.getRecommand());
         tvMsg.setText(newList.getAbstractX());
         tvBm.setText("报名人数：" + newList.getAudienceCount());
         tvSj.setText("日期：" + newList.getPublicTime());
@@ -87,7 +94,7 @@ public class DhDetailsActivity extends AppCompatActivity {
                     newComments.add(0, newComment);
                     adapter.notifyDataSetChanged();
                     tvPl.setText("评论(" + newComments.size() + ")");
-                    etPl.setText("");
+                    etPl.setText("");return true;
                 }
                 return false;
             }

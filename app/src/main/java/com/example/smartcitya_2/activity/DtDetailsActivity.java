@@ -113,7 +113,7 @@ public class DtDetailsActivity extends AppCompatActivity {
             }
         }
         for (int i = 0; i < stationInfos.size(); i++) {
-            if (stationInfos.get(i).getStationIndex() > Math.min(index, nowIndex) && stationInfos.get(i).getStationIndex() < Math.max(index, nowIndex)) {
+            if (stationInfos.get(i).getStationIndex() > Math.min(index, nowIndex) && stationInfos.get(i).getStationIndex() < (Math.max(index, nowIndex))-1) {
                 distance += stationInfos.get(i).getDistance();
             }
         }

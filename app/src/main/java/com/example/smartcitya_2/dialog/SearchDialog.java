@@ -41,12 +41,11 @@ public class SearchDialog extends DialogFragment {
 
     private AppHomeActivity appHomeActivity;
 
-    public SearchDialog(AppHomeActivity appHomeActivity) {
-        this.appHomeActivity = appHomeActivity;
-    }
 
-    public SearchDialog(String msg) {
+
+    public SearchDialog(String msg,AppHomeActivity appHomeActivity) {
         this.msg = msg;
+        this.appHomeActivity = appHomeActivity;
     }
 
     @Nullable
